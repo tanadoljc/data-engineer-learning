@@ -1,0 +1,40 @@
+
+// SparkContext as a Connection & SparkSession as an Interface
+
+// ถ้ามีให้ใช้ session นั้น ถ้าไม่มีให้สร้างใหม่
+my_spark = SparkSession.builder.getOrCreate()
+
+// list existing table
+spark.catalog.listTables()
+
+// call the sql by query text
+spark.sql('query')
+
+// convert to pandas dataframe
+var.toPandas()
+
+// Pandas DataFrame -> Spark DataFrame & cannot call by sql
+spark.createDataFrame(var)
+
+// create temporary table to query 
+var.createTempView("table_name")
+// to check if there is exist table name
+var.createOrReplaceTempView("table_name")
+
+// read directly from .csv file
+var = spark.read.csv(file_path, header=True)
+
+// create new col
+table.withColumn("col_name", value)
+table.withColumnRenamed("old","new")
+
+// other relevant functions
+table.filter()
+table.select()
+table.selectExpr()
+table.avg()
+table.groupBy().min()
+
+// join
+table.join(table, on="col_name", how="etc. leftouter")
+

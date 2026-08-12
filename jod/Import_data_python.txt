@@ -1,0 +1,38 @@
+
+- Import Data
+
+// read file using with
+with open(filename, 'r') as file:
+    print(file.read())
+// using np.loadtxt
+data = np.loadtxt(file, delimiter='\t', skiprows=1, usecols=[1, 3], dtype=str)
+// csv -> DataFrame
+data = pd.read_csv(file, nrows=5, header=None)
+// DataFrame -> numpy
+data_array = data.to_numpy()
+
+# Pickle file คือไฟล์ที่เป็น binary เอาไว้เก็บพวก dict, list ของ python 
+# โดยการ serialize ให้เป็น binary
+
+// Excel -> DataFrame
+xls = pd.ExcelFile(file)
+df2 = xls.parse(1, usecols=[0], skiprows=1, names=[col_name])
+
+Optional:
+// load h5py
+data = h5py.File(file, 'r')
+// read stata
+df = pd.read_stata('.dta file')
+// Matlab using scipy.io
+mat = scipy.io.loadmat('.mat file')
+
+- Connect database
+
+// using sqlalchemy
+1. create_engine
+2. Connect engine
+3. con.execute(query)
+4. Close connections
+
+// using pandas
+df = pd.read_sql_query(query, engine)

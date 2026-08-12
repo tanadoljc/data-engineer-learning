@@ -1,0 +1,6 @@
+- provision resources ทั้ง cloud และ on-premise ได้
+- SQL ต้องเป๊ะ ย้ายค่ายไปมาได้ทั้ง MS, Oracle, My, Postgres พวก NoSQL อย่าง MongoDB Redis ต้องได้
+- เขียนโค้ดได้ทั้งแบบ from scratch หรือใช้ framework ภาษาหลักคือ Python, Java, Scala
+- Realtime พวก Kafka ต้องได้ Batch ต้องแม่น Data pipeline มีประสบการณ์กับพวก orchestration tool อย่าง Airflow
+- รู้จักพวก modern architecture พวก docker K8s microservices สามารถออกแบบ solution ได้
+- เขียนเว็บเป็นบ้างก็ดี
