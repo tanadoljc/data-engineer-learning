@@ -1,0 +1,4 @@
+{
+    "dbt.dbtPythonPathOverride": "/Users/4most/Work/DE_Learn/dbt-knowledge/.venv/bin/python3",
+    "dbt.perspectiveTheme": "Monokai"
+}
