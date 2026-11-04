@@ -1,0 +1,29 @@
+<p>This is my first Angular App</p>
+
+<h1>{{title}}</h1>
+
+<button [disabled]="isDisabled" (click)="onClick()">Toggle</button>
+<!-- There also has [()] for binding 2 ways such as input -->
+
+<h2>Count: {{count()}}</h2>
+<h2>Double: {{double()}}</h2>
+
+<button (click)="addValue()">+</button>
+<button (click)="minusValue()">-</button>
+<button (click)="resetValue()">reset</button>
+
+<!--
+<ul>
+
+  @for (user of users(); track user.id) {
+    <li>{{ user.name }} (อายุ: {{ user.age }})</li>
+  } @empty {
+    <li>ไม่มีข้อมูลผู้ใช้ในระบบ</li>
+  }
+
+  @for (item of items(); track item.id; let idx = $index, let isFirst = $first, let isLast = $last)
+
+  @if ()
+  @else ()
+
+</ul> -->
